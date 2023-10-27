@@ -1,0 +1,37 @@
+
+    classDiagram
+        class User{
+            +int id
+            +str username
+            +str password
+            +str email
+            +list preferences
+            +__init__(username: str, password: str, email: str)
+            +add_preference(preference: str)
+            +remove_preference(preference: str)
+        }
+        class Weather{
+            +int id
+            +str location
+            +float temperature
+            +float humidity
+            +str forecast
+            +__init__(location: str)
+            +update_weather()
+        }
+        class Advice{
+            +int id
+            +str advice
+            +str source
+            +__init__(advice: str, source: str)
+        }
+        class Reminder{
+            +int id
+            +str reminder
+            +datetime date
+            +__init__(reminder: str, date: datetime)
+        }
+        User -- Weather: gets updates from
+        User -- Advice: receives
+        User -- Reminder: receives
+    

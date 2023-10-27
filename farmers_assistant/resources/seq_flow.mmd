@@ -1,0 +1,13 @@
+
+    sequenceDiagram
+        participant U as User
+        participant W as Weather
+        participant A as Advice
+        participant R as Reminder
+        U->>W: update_weather()
+        W-->>U: return weather data
+        U->>A: get_advice()
+        A-->>U: return advice
+        U->>R: get_reminders()
+        R-->>U: return reminders
+    
